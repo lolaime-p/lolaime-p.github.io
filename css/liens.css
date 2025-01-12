@@ -37,3 +37,15 @@
     color: #45a049;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .links-card {
+        padding: 1rem;
+    }
+}
