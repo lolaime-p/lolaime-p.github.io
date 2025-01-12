@@ -1,0 +1,91 @@
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.team-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.team-middle, .team-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid #4CAF50;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.team-member .role {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-section {
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.timeline-image {
+    width: 60%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.timeline-image:hover {
+    transform: translateY(-5px);
+}
+
+.section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.justify{
+    text-align: justify;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
