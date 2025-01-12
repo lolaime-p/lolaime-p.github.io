@@ -6,6 +6,10 @@
     <title>Green Pixels - Page d'accueil</title>
     <link rel="stylesheet" href="css/commun.css">
     <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -23,7 +27,7 @@
             </ul>
         </nav>
         
-        <main class="grid">
+        <main class="carousel">
             <div class="card">
                 <h2>Présentation du Projet</h2>
                 <p>Découvrez l'historique, l'équipe et l'évolution de notre projet.</p>
@@ -47,6 +51,17 @@
             <p>© 2025 Green Pixels Studio - Tous droits réservés</p>
         </footer>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    </script>
 </body>
 </html>
 
