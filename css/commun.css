@@ -19,6 +19,10 @@ body {
     background-color: #4CAF50;
 }
 
+h2, h3{
+    font-family: Poppins, sans-serif;
+}
+
 header {
     background-color: #f4f4f4;
     padding: 2rem;
@@ -35,7 +39,7 @@ header {
 }
 
 .header-logo {
-    width: 100px;  /* Ajustez selon la taille souhaitée */
+    width: 100px; 
     height: auto;
     margin-left: 2rem;
 }
