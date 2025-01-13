@@ -5,7 +5,18 @@
     margin: 0 auto;
     padding: 2rem;
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .team-top {
     display: flex;
     justify-content: center;
