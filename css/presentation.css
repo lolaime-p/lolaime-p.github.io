@@ -22,7 +22,13 @@
     justify-content: center;
     margin-bottom: 2rem;
 }
-
+.profile-pic:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.team-grid {
+    grid-template-columns: 1fr;
+}
 .team-middle, .team-bottom {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
