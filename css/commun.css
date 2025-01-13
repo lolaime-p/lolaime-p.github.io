@@ -6,13 +6,15 @@
 
 
 :root {
-    --green-main: #2E7D32;
-    --green-secondary: #66BB6A;
-    --beige: #F5F5DC;
-    --brown: #8D6E63;
-    --text-primary: #333333;
-    --text-secondary: #666666;
+    --green-main: #2E7D32; /* Vert forêt principal */
+    --green-secondary: #66BB6A; /* Vert clair pour les boutons et détails */
+    --green-background: #E8F5E9; /* Vert pâle pour le fond général */
+    --beige: #FDF5E6; /* Beige doux pour les contrastes */
+    --brown: #8D6E63; /* Brun pour des touches naturelles */
+    --text-primary: #333333; /* Texte principal (gris foncé) */
+    --text-secondary: #666666; /* Texte secondaire (gris clair) */
 }
+
 
 html, body {
     height: 100%;
@@ -24,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--beige);
+    background-color: var(--green-background);
     color: var(--text-primary);
 }
 
@@ -55,14 +57,8 @@ header {
 }
 
 nav {
-    background-color: #8a8989;
-    padding: 1rem;header {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-}
+    background-color: var(--beige);
+    padding: 1rem;
     border-radius: 8px;
     margin-bottom: 2rem;
 }
@@ -76,7 +72,7 @@ nav ul {
 
 nav a {
     background-color: var(--green-secondary);
-    color: white;
+    color: var(--text-primary);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -84,38 +80,45 @@ nav a {
 }
 
 .container {
-    width: 95%;  
-    margin: 0 auto;
+   background-color: var(--beige);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin: 0 auto;
     flex: 1 0 auto;
+    width: 95%;
 }
 
 nav a:hover {
     background-color: var(--green-main);
+    color: white;
 }
 
 footer {
     text-align: center;
     flex-shrink: 0;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color: var(--green-main);
+    color: var(--beige);
     border-radius: 8px;
-    margin-bottom: 0;
+    margin-top: 2rem;
     
 }
 
 .button {
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--green-main);
+    color: var(--beige);
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
-    background-color: #45a049;
+     background-color: var(--green-secondary);
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {
