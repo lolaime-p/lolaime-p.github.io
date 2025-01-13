@@ -30,6 +30,16 @@ body {
     color: var(--text-primary);
 }
 
+body.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+body.dark-mode .card {
+    background: #333;
+    color: #fff;
+}
+
 h2, h3{
     font-family: Poppins, sans-serif;
 }
@@ -78,6 +88,10 @@ nav a {
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+nav a:focus {
+    outline: 2px dashed var(--green-secondary);
+    outline-offset: 4px;
+}
 
 .container {
    background-color: var(--beige);
@@ -115,7 +129,10 @@ footer {
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 .button:hover {
      background-color: var(--green-secondary);
     transform: scale(1.05);
