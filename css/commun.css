@@ -137,6 +137,17 @@ footer {
      background-color: var(--green-secondary);
     transform: scale(1.05);
 }
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    display: block;
+}
 
 @media screen and (max-width: 768px) {
     .container {
