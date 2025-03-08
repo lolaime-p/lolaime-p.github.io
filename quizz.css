@@ -1,0 +1,99 @@
+/* quiz.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--beige);
+    color: var(--text-secondary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    color: var(--green-main);
+}
+
+.quiz-container {
+    background: linear-gradient(to bottom, var(--beige), #ffffff);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.quiz-container h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    color: var(--green-main);
+    margin-bottom: 1rem;
+}
+
+.quiz-container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.quiz-container button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid var(--green-main);
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quiz-container button:hover {
+    background-color: #c8e6c9;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background-color: var(--green-main);
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--green-main);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--text-secondary);
+}
