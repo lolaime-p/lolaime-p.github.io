@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Game Quiz</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #f0f9f0; text-align: center; padding: 20px; }
+  .quiz-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  button { padding: 10px; margin: 5px 0; width: 100%; border: 1px solid #4caf50; border-radius: 5px; background-color: #e8f5e9; cursor: pointer; }
+  button:hover { background-color: #c8e6c9; }
+</style>
+</head>
+
+<body>
+
+<h1>Test Your Knowledge about Eco Game!</h1>
+<div class="quiz-container" id="quiz"></div>
+
+<script>
+  const questions = [
+    {
+      question: "How did the idea for *Eco Game* originate?",
+      options: [
+        "A) During a nature retreat",
+        "B) In a small room, discussing ecological crises with friends",
+        "C) After watching a documentary",
+        "D) From a school project"
+      ],
+      answer: 1
+    },
+    {
+      question: "Which of these games inspired the oceanic level in *Eco Game*?",
+      options: [
+        "A) Journey",
+        "B) Subnautica",
+        "C) Eco",
+        "D) The Forest"
+      ],
+      answer: 1
+    },
+    {
+      question: "What is the main difference between *Subnautica* and *Eco Game*’s approach to exploration?",
+      options: [
+        "A) Focus on survival vs. ecosystem preservation",
+        "B) Combat vs. peaceful exploration",
+        "C) Land-based vs. ocean-based environments",
+        "D) Multiplayer vs. single-player focus"
+      ],
+      answer: 0
+    },
+    {
+      question: "*Journey* inspired which aspect of *Eco Game*?",
+      options: [
+        "A) Strategic combat mechanics",
+        "B) Poetic and emotional storytelling without explicit dialogue",
+        "C) Real-time ecosystem impact",
+        "D) Open-world exploration"
+      ],
+      answer: 1
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  const quizContainer = document.getElementById("quiz");
+
+  function showQuestion() {
+    if (currentQuestion < questions.length) {
+      const q = questions[currentQuestion];
+      quizContainer.innerHTML = `
+        <h2>${q.question}</h2>
+        ${q.options.map((option, index) => `
+          <button onclick="checkAnswer(${index})">${option}</button>
+        `).join('')}
+      `;
+    } else {
+      showResult();
+    }
+  }
+
+  function checkAnswer(selected) {
+    if (selected === questions[currentQuestion].answer) {
+      score++;
+    }
+    currentQuestion++;
+    showQuestion();
+  }
+
+  function showResult() {
+    quizContainer.innerHTML = `
+      <h2>Your Score: ${score} / ${questions.length}</h2>
+      <p>${score >= 3 ? "🌍 Eco Warrior — You know the heart of *Eco Game*!" : score >= 2 ? "🌿 Eco Ally — You’re on the right track!" : "🌱 Eco Explorer — Time to dive deeper into the story!"}</p>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    `;
+  }
+
+  function restartQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+  }
+
+  showQuestion();
+</script>
+
+</body>
+</html>
